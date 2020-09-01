@@ -1,0 +1,24 @@
+<div class="content" style="background-color:white">
+	<form id="af" name="authorForm" novalidate>
+		<p><font color="#f39c12" size="24">Author profile: {{authorInfo.username}}</font></p>
+		<p><font color="#f39c12">Firm: </font>{{firmInfo.name}}</p>
+		<p><font color="#f39c12">Operator score: </font>{{authorInfo.author.operator_score}}</p>
+		<p><font color="#f39c12">Rating: </font>{{authorInfo.author.rating}}</p>
+		<div>
+			<input type="number" name="test" ng-model="rating" placeholder="Value 1-5" ng-pattern="{{regex}}"
+			 ng-required="true" ng-disabled="!Singleton.SessionInfo.test" min="1" max="5" style="width: 3%; margins:0px">
+			<input type="submit" ng-click="rateAuthor()" value="Rate author" style="width: 4%;" ng-disabled="authorForm.test.$invalid"/><br/>
+		</div>
+			<textarea placeholder="Add a public comment..." name="textArea" ng-model="comment" ng-required="true" ng-disabled="!Singleton.SessionInfo.test"></textarea><br/>
+			<input type="submit" ng-click="commentAuthor()" value="Comment" style="width: 4%;" ng-disabled="authorForm.textArea.$invalid"/><br/>
+			<p><font color="#4476ce">{{message}}</font></p>
+		<p><font color="#f39c12">Comments: </font></p>
+		<div style="background-color: #dbdbdb">
+		<br/>
+		<label ng-repeat="com in commentInfo">
+			<p style="margin: 0px" ><font color="#f39c12">by: </font>{{com.user}}</p>
+			<textarea ng-disabled="true">{{com.text}}</textarea><br/><br/>
+		</label>
+		</div>
+		</form>
+</div>

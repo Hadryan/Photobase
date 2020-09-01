@@ -1,0 +1,33 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">{{imageInfo.name}}</font></p>
+		<br/>
+		<img ng-src="data:image/png;base64, {{imageData}}"/>
+		<p><font color="#e29212">Image name: </font>{{imageInfo.name}}</p>
+		<p><font color="#e29212">Author: </font><input type="submit" ng-click="viewAuthor()" style="width:100px" value="{{imageInfo.author.username}}"><br/></p>
+		<p><font color="#e29212">Location:  </font>{{imageInfo.location}}</p>
+		<p><font color="#e29212">Rating: </font>{{imageInfo.rating}}</p>
+		<div>
+			<input type="number" ng-model="rating" placeholder="Value 1-5" ng-pattern="{{regex}}"
+			 ng-required="true" ng-disabled="!Singleton.SessionInfo.test" min="1" max="5" style="width: 3%; margins:0px">
+			<input type="submit" ng-click="rateImage()" value="Rate image" style="width: 4%;" ng-disabled="imagePreviewForm.$invalid"/><br/>
+		</div>
+		<p><font color="#e29212">Sold </font>{{imageInfo.sales}} times</p>
+		<p><font color="#e29212">Description: </font>{{imageInfo.description}}</p>
+		<p><font color="#e29212">Categories: </font></p>
+		<div class="container">
+			<label ng-repeat="category in imageInfo.categories">
+				{{category.name}}<br/>
+			</label>
+		</div>
+		<p><font color="#e29212">Available resolutions: </font></p>
+		<div class="container">
+			<label ng-repeat="resolution in imageInfo.resolutions">
+				{{resolution.width + 'x' + resolution.height + ' - $' + imageInfo.imageResData[$index].price}}
+				<input type="submit" ng-click="addToCart(imageInfo.imageResData[$index])" value="Add to cart" style="width: 25%;"/>
+				<br/>
+			</label>
+		</div>
+		<p><font color="#4476ce">{{message}}</font></p>
+	</form>
+</div>

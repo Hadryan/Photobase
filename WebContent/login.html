@@ -1,0 +1,19 @@
+<div class="content" style="background-color:white">
+		<form name="loginForm" novalidate>
+			<p><font color="#f39c12" size="8">Log in: </font></p>
+			<input type="text" ng-model="user.username" name="username" placeholder="Username" ng-required="true"><br>
+			<div ng-show="loginForm.username.$dirty && loginForm.username.$invalid">
+				<small style="color: red; display: block; text-align: center;">Enter a valid username</small>
+			</div>
+			<input type="password" ng-model="user.password" name="password" placeholder="Password" ng-required="true"><br>
+			<div ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+				<small style="color: red; display: block; text-align: center;">Enter a valid password</small>
+			</div>
+			<input type="submit" value="Log in" ng-click="login()" ng-disabled="loginForm.$invalid"/>
+			<br>
+			<br>
+			<a href="#/forgot_password">Forgot password?</a><br>
+			<p><font color="#4476ce">{{message}}</font></p>
+			<br>
+		</form>
+</div>

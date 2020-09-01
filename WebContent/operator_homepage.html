@@ -1,0 +1,28 @@
+<div class="content" style="background-color:white">
+		<form name="operatorHomepageForm" novalidate>
+			<p><font color="#f39c12" size="8">Pending images</font></p>
+			<p><font color="#f39c12" size="8" ng-show="Singleton.SessionInfo.operatorType=='newOperator'">Account not fully activated</font></p>
+			
+	<div class="content" style="background-color: #dbdbdb">
+	<div class="imageLayout">
+	<label ng-repeat="image in imageData">
+		<div class = "imageItem">
+			<p id="paragraph"><font color="#e29212">{{image.info.name}}</font></p>
+			<div class="image-container">
+				<img ng-src="data:image/png;base64, {{image.data}}"/>
+					<div ng-click="previewImage(image.info.id)" class="after"><br/>
+						&nbsp &nbsp Image name: {{image.info.name}}<br/>
+						&nbsp &nbsp Location: {{image.info.location}}<br/>
+						&nbsp &nbsp Rating: {{image.info.rating}}<br/>
+					</div>
+			</div>
+		</div>
+	</label>
+	</div>
+	</div>
+		</form>
+</div>
+<div class="content2" style="background-color: #f39c12">
+	<input type="submit" ng-click="nextPage()" value="next >" ng-disabled="next" style="width: 4%;"/>
+	<input type="submit" ng-click="previousPage()" value="< previous" ng-disabled="previous" style="width: 4%;"/><br/>
+</div>

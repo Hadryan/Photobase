@@ -1,0 +1,24 @@
+<div class="content" style="background-color:white">
+	<form name="adminHomepage" id="adminHomepage" novalidate>
+		<p><font color="#f39c12" size="24">Add new operator:</font></p>
+		<input type="text" ng-model="operator.username" name="username" placeholder="Username" ng-required="true"><br>
+			<div ng-show="adminHomepage.username.$dirty && adminHomepage.username.$invalid">
+				<small style="color: red; display: block; text-align: center;">Enter a valid username</small>
+			</div>
+			<input type="password" ng-model="operator.password" name="password" placeholder="Password" ng-required="true"><br>
+			<div ng-show="adminHomepage.password.$dirty && adminHomepage.password.$invalid">
+				<small style="color: red; display: block; text-align: center;">Enter a valid password</small>
+			</div>
+			<input type="submit" value="Add operator" ng-click="addOperator(operator)" ng-disabled="adminHomepage.$invalid"/>
+	
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+				<p><font color="#f39c12" size="24">Photobase operators</font></p>
+		<ul>
+			<li ng-repeat="operator in operators">
+				<h3>{{operator.username}} - {{operator.firmId}}</h3>
+				<div class="remove" ng-click="removeOperator(operator)">x</div>
+			</li>
+		</ul>
+	</form>
+</div>

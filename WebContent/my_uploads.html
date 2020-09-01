@@ -1,0 +1,15 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" id="myUploadsForm" novalidate>
+		<p><font color="#f39c12" size="24">My uploads: </font></p>
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+		<ul>
+			<li ng-repeat="image in imageData">
+				<p>{{image.info.name}} - {{image.info.location}} - Rating: {{image.info.rating}} - Sales: {{image.info.sales}}</p>
+				<img ng-src="data:image/png;base64, {{image.data}}"/>
+				<div class="remove" ng-click="deleteImage(image)">x</div>
+			</li>
+		</ul>
+		
+	</form>
+</div>

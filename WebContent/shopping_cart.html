@@ -1,0 +1,14 @@
+<div class="content" style="background-color:white">
+	<form name="shoppingCart" novalidate>
+		<p><font color="#f39c12" size="24">Shopping cart</font></p>
+		<ul>
+			<li ng-repeat="item in shoppingCart.items">
+				<h3>{{item.name}} - {{item.resolutionData.width}}x{{item.resolutionData.height}} - ${{item.price}}</h3>
+				<div class="remove" ng-click="removeItem(item)">x</div>
+			</li>
+		</ul>
+		<p ng-show="!empty"><font color="#f39c12" size="18">Total: </font><font size="18">${{shoppingCart.price}}</font></p>
+		<p><font color="#4476ce">{{message}}</font></p>
+		<input type="submit" value="Continue to checkout" ng-click="checkout()" ng-disabled="!Singleton.SessionInfo.test || empty" style="width: 200px;"/>
+	</form>
+</div>

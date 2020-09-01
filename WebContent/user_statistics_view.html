@@ -1,0 +1,19 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">Statistics for: </font><font size="24">{{user.username}}</font></p><br/>
+		<p><font color="#e29212">User role: </font>{{user.role}}</p>
+		<p><font color="#e29212">Email: </font>{{user.email}}</p>
+		<p ng-show="user.banned == 1"><font color="#e29212">Banned</font></p>
+		<p ng-show="user.deleted == 1"><font color="#e29212">Deleted</font></p>
+		<p ng-show="user.role == 'prodavac'" ><font color="#e29212">Sold images: </font>{{soldImagesCount}}</p>
+		<p ng-show="user.role == 'prodavac'"><font color="#e29212">Average asking price:</font> ${{averagePriceByAuthor}}</p>
+		<div ng-show="resolutions.length != 0">
+			<p><font color="#e29212">Most frequently bought resolutions: </font></p>
+			<ul>
+			<li ng-repeat="res in resolutions">
+				<h3>{{res}}</h3>
+			</li>
+		</ul>
+		</div>
+	</form>
+</div>

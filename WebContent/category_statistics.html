@@ -1,0 +1,10 @@
+<div class="content" style="background-color:white">
+		<form name="loginForm" novalidate>
+			<p><font color="#f39c12" size="8">Categories: </font></p>
+			<ul>
+				<li ng-repeat="category in categories">
+					<h3 class="heder" ng-click="viewCategoryStatistics(category)"><font color="#4476ce">{{category.name}}</font></h3>
+				</li>
+			</ul>
+		</form>
+</div>

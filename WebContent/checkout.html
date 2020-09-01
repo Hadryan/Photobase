@@ -1,0 +1,20 @@
+<div class="content" style="background-color:white">
+	<form name="checkoutForm" novalidate>
+		<p><font color="#f39c12" size="24">Checkout</font></p>
+		
+		<p><font color="#f39c12">Select a card: </font></p>
+			<div class="select">
+				<select name="slct" id="slct" ng-model="selectedCard" placeholder="Select search criteria" align="center" ng-required="true">
+					<option value="" disabled selected>Select a creditcard...</option>
+					<option ng-repeat="card in cards" value="{{card.id}}">{{card.card_number}} - {{card.expiration_date}}</option>
+				</select>
+			</div>
+		<br/>
+	
+		<input type="submit" value="Add new card" ng-click="addCard()" ng-disabled="!Singleton.SessionInfo.test" style="width: 5%;"/>
+		
+		<p><font color="#f39c12" size="24">total: </font><font size="24">${{total}}</font></p>
+		<input type="submit" value="Buy" ng-click="buy()" ng-disabled="!Singleton.SessionInfo.test || checkoutForm.$invalid" style="width: 4%;"/>
+		<p><font color="#4476ce">{{message}}</font></p>
+	</form>
+</div>

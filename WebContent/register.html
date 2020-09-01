@@ -1,0 +1,26 @@
+<div class="content" style="background-color:white">
+	<form name="registerForm" novalidate>
+		<p><font color="#f39c12" size="18">Register: </font></p>
+		<input type="text" ng-model="user.username" name="username" placeholder="Username" ng-required="true"><br>
+		<div ng-show="registerForm.username.$dirty && registerForm.username.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid username</small>
+		</div>
+		<input type="password" ng-model="user.password" name="password" placeholder="Password" ng-required="true"><br>
+		<div ng-show="registerForm.password.$dirty && registerForm.password.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid password</small>
+		</div>
+		<input type="email" ng-model="user.email" name="email" placeholder="Email" ng-required="true"><br>
+		<div ng-show="registerForm.email.$dirty && registerForm.email.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid email</small>
+		</div>
+		<input type="text" ng-model="user.state" name="state" placeholder="State" ng-required="true"><br>
+		<div ng-show="registerForm.state.$dirty && registerForm.state.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid state</small>
+		</div>
+		<input type="submit" value="Register" ng-click="register()" ng-disabled="registerForm.$invalid"/>
+		<br>
+		<br>
+		<p><font color="#4476ce">{{message}}</font></p>
+		<br>
+	</form>
+</div>

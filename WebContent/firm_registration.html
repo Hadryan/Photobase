@@ -1,0 +1,30 @@
+<div class="content" style="background-color:white">
+	<form name="registerForm" novalidate>
+		<p><font color="#f39c12" size="18">Firm registration: </font></p>
+		<input type="text" ng-model="firm.name" name="firmName" placeholder="Firm name" ng-required="true"><br>
+		<div ng-show="registerForm.firmName.$dirty && registerForm.firmName.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid name</small>
+		</div>
+		<input type="text" ng-model="firm.location" name="firmLocation" placeholder="Location" ng-required="true"><br>
+		<div ng-show="registerForm.firmLocation.$dirty && registerForm.firmLocation.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid location</small>
+		</div>
+		<input type="number" ng-model="firm.pib" name="userPib" placeholder="PIB" ng-required="true" min="10000001" max="99999999"><br>
+		<div ng-show="registerForm.userPib.$dirty && registerForm.userPib.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid PIB</small>
+		</div>
+		<input type="email" ng-model="firm.email" name="firmEmail" placeholder="email" ng-required="true"><br>
+		<div ng-show="registerForm.firmEmail.$dirty && registerForm.firmEmail.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid email</small>
+		</div>
+		<input type="number" ng-model="firm.provision" name="firmProvision" placeholder="Provision (0.XXXX)" ng-required="true" ng-pattern="pattern"><br>
+		<div ng-show="registerForm.firmProvision.$dirty && registerForm.firmProvision.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter valid provision format</small>
+		</div>
+		<input type="submit" value="Register" ng-click="register()" ng-disabled="registerForm.$invalid"/>
+		<br>
+		<br>
+		<p><font color="#4476ce">{{message}}</font></p>
+		<br>
+	</form>
+</div>

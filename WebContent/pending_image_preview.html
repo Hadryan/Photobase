@@ -1,0 +1,28 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">{{imageInfo.name}}</font></p>
+		<br/>
+		<img ng-src="data:image/png;base64, {{imageData}}"/>
+		<p><font color="#e29212">Image name: </font>{{imageInfo.name}}</p>
+		<p><font color="#e29212">Author: </font>{{imageInfo.author.username}}</p>
+		<p><font color="#e29212">Location:  </font>{{imageInfo.location}}</p>
+		<p><font color="#e29212">Rating: </font>{{imageInfo.rating}}</p>
+		<p><font color="#e29212">Sold </font>{{imageInfo.sales}} times</p>
+		<p><font color="#e29212">Description: </font>{{imageInfo.description}}</p>
+		<p><font color="#e29212">Categories: </font></p>
+		<div class="container">
+			<label ng-repeat="category in imageInfo.categories">
+				{{category.name}}<br/>
+			</label>
+		</div>
+		<p><font color="#e29212">Available resolutions: </font></p>
+		<div class="container">
+			<label ng-repeat="resolution in imageInfo.resolutions">
+				{{resolution.width + 'x' + resolution.height + ' - $' + imageInfo.imageResData[$index].price}}
+				<br/>
+			</label>
+		</div>
+		<input type="submit" ng-click="approve(imageInfo.id)" style="width:120px" value="Approve image">
+		<p><font color="#4476ce">{{message}}</font></p>
+	</form>
+</div>

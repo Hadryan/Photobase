@@ -1,0 +1,17 @@
+<div class="content" style="background-color:white">
+	<form name="applyForm" novalidate>
+		<p><font color="#f39c12" size="24">Author application</font></p>
+		<input type="file" id="userUpload" ng-model="file1" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file2" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file3" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file4" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file5" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file6" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file7" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file8" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file9" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="file" id="userUpload" ng-model="file10" valid-file name="userUpload" accept=".png" required type="file"><br/>
+		<input type="submit" value="Apply" ng-click="apply()" ng-disabled="applyForm.$invalid"/>
+		<p><font color="#4476ce">{{message}}</font></p>
+	</form>
+</div>

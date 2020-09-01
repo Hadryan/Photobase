@@ -1,0 +1,42 @@
+<div class="content" style="background-color:white">
+	<form name="cardForm" novalidate>
+		<p><font color="#f39c12" size="24">Add credit card</font></p>
+		<input type="text" ng-model="card.card_number" name="cardnumber" placeholder="Card number: XXXX-XXXX-XXXX-XXXX" ng-pattern="cardNumberRegex" ng-required="true"><br>
+		<div ng-show="cardForm.cardnumber.$dirty && cardForm.cardnumber.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid card number</small>
+		</div>
+		<input type="text" ng-model="card.validation_code" name="validationCode" placeholder="CVV" ng-pattern="validationCodeRegex" ng-required="true"><br>
+		<div ng-show="cardForm.validationCode.$dirty && cardForm.validationCode.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid validation code</small>
+		</div>
+		<input type="text" ng-model="card.expiration_date" name="expirationDate" placeholder="Expiration date: YYYY-MM-DD"
+		 ng-pattern="expirationDateRegex" ng-required="true"><br>
+		<div ng-show="cardForm.expirationDate.$dirty && cardForm.expirationDate.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid date</small>
+		</div>
+		<input type="text" ng-model="card.owner_name" name="ownerName" placeholder="Cardholder's name" ng-required="true"><br>
+		<div ng-show="cardForm.ownerName.$dirty && cardForm.ownerName.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid name</small>
+		</div>
+		<input type="submit" value="Add credit card" ng-click="addCard()" ng-disabled="!Singleton.SessionInfo.test || cardForm.$invalid" style="width: 200px;"/>
+	</form>
+	
+	<div ng-show="Singleton.SessionInfo.userRole == 'prodavac'">
+	<form name="authorCardForm" id="authorCardForm" novalidate>
+		<p><font color="#f39c12" size="24">Set card for receiving payments:</font></p>
+			<div class="select">
+				<select name="slct" id="slct" ng-model="selectedCard" placeholder="Select search criteria" align="center" ng-required="true">
+					<option value="" disabled selected>Select a credit card...</option>
+					<option ng-repeat="carde in cards" value="{{carde.id}}">{{carde.card_number}} - {{carde.expiration_date}}</option>
+				</select>
+			</div>
+		<br/>
+	
+		<input type="submit" value="Set card" ng-click="setAuthorCard()" ng-disabled="!Singleton.SessionInfo.test" style="width: 5%;"/>
+	</form>
+	</div>
+	<form>
+	<p><font color="#4476ce">{{message}}</font></p>
+	</form>
+	
+</div>

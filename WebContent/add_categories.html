@@ -1,0 +1,21 @@
+<div class="content" style="background-color:white">
+	<form name="addCategoryForm" id="addCategoryForm" novalidate>
+		
+		<p><font color="#f39c12" size="24">Add new category:</font></p>
+		<input type="text" ng-model="category.name" name="name" placeholder="Category name" ng-required="true"><br>
+		<div ng-show="addCategoryForm.name.$dirty && addCategoryForm.name.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid name</small>
+		</div>
+		
+		<input type="submit" value="Add category" ng-click="addCategory(category)" ng-disabled="addCategoryForm.$invalid"/>
+	
+		<p><font color="#4476ce">{{message}}</font></p>
+	
+		<p><font color="#f39c12" size="24">Categories:</font></p>
+		<ul>
+			<li ng-repeat="category in categories">
+				<h3>{{category.name}}</h3>
+			</li>
+		</ul>
+	</form>
+</div>

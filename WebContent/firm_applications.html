@@ -1,0 +1,14 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">Firm applications</font></p>
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+		<ul>
+			<li ng-repeat="firm in firms">
+				<h3><font color="#4476ce">{{firm.name}} - {{firm.location}} - PIB: {{firm.pib}} - Provision: {{firm.provision}} - {{firm.email}}</font></h3>
+				<input type="submit" ng-click="approve(firm)" value="Approve" style="width: 100px;"/>
+			</li>
+		</ul>
+		
+	</form>
+</div>

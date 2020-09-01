@@ -1,0 +1,14 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">Manage users</font></p>
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+		<ul>
+			<li ng-repeat="user in users">
+				<h3 class="heder" ng-click="viewUserStatistics(user)"><font color="#4476ce">{{user.id}} - {{user.username}} - {{user.role}} {{user.extra}}</font></h3>
+				<div ng-show="user.banned == 0 && user.deleted == 0" class="remove" ng-click="ban(user)">ban</div>
+			</li>
+		</ul>
+		
+	</form>
+</div>

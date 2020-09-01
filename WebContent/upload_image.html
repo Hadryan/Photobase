@@ -1,0 +1,37 @@
+<div class="content" style="background-color:white">
+	<form name="uploadForm" id="uploadForm" novalidate>
+		<p><font color="#f39c12" size="18">Upload image: </font></p>
+		<input type="file" id="userUpload" ng-model="file" valid-file name="userUpload" accept=".png" required type="file">
+		<br/>
+		<input type="text" ng-model="image.name" name="name" placeholder="image name" ng-required="true"><br>
+		<div ng-show="uploadForm.name.$dirty && uploadForm.name.$invalid">
+			<small style="color: red; display: block; text-align: center;">Enter a valid name</small>
+		</div>
+		<input type="text" ng-model="image.location" name="location" placeholder="location"><br>
+		<textarea placeholder="description..." name="description" ng-model="image.description"></textarea>
+		<br/>
+		<textarea placeholder="enter tags (tag1, tag2 ...)" name="tags" ng-model="image.tags"></textarea>
+		<br/>
+		<p><font color="#edb153">Select categories</font></p>
+		<div class="container">
+			<label ng-repeat="category in categories">
+				<input type="checkbox" value="{{category.name}}" ng-model="checked" ng-click="manageCategory(category.id, checked)">{{category.name}}<br/>
+			</label>
+		</div>
+		<p><font color="#edb153">Select resolutions and specify price in range</font></p>
+		<div class="container">
+			<label ng-repeat="resolution in resolutions">
+				<input type="checkbox" value="{{resolution.name}}" ng-model="checked" ng-click="manageResolution(resolution.id, checked)" ng-required="checkBoxSelected()">
+				{{resolution.width + 'x' + resolution.height + ' - ($' + resolution.min_price + ' - $' + resolution.max_price + ')'}}
+				<input type="number" id="{{resolution.id}}" ng-model="price" placeholder="price" ng-disabled="!checked" ng-required="checked"
+				 min="{{resolution.min_price}}" max="{{resolution.max_price}}">
+				<br/>
+			</label>
+		</div>
+		<input type="submit" value="Upload" ng-click="uploadImage()" ng-disabled="uploadForm.$invalid"/>
+		<br>
+		<br>
+		<p><font color="#4476ce">{{message}}</font></p>
+		<br>
+	</form>
+</div>

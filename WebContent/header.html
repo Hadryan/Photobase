@@ -1,0 +1,37 @@
+<div id="menu-bar">
+  <div ng-controller="HeaderController">
+    <h1>Photoshop</h1>
+    <ul>
+      <li><a href="#/logout" ng-show="Singleton.SessionInfo.test">Logout</li>
+      <li><a href="#/delete_account" ng-show="Singleton.SessionInfo.userRole == 'kupac' || Singleton.SessionInfo.userRole == 'prodavac'
+      || Singleton.SessionInfo.userRole == 'applied'">Delete account</li>
+      <li><a href="#/leave_firm" ng-show="Singleton.SessionInfo.firmAuthor == 'firmAuthor' && Singleton.SessionInfo.appliedToFirm != 'appliedToFirm'">Leave firm</li>
+      <li><a href="#/change_password" ng-show="Singleton.SessionInfo.userRole == 'kupac' || Singleton.SessionInfo.userRole == 'prodavac'
+      || Singleton.SessionInfo.userRole == 'applied'">Change password</li>
+      <li><a href="#/author_application" ng-show="Singleton.SessionInfo.userRole=='kupac'">Author application</li>
+      <li><a href="#/login" ng-show="!Singleton.SessionInfo.test">Login</li>
+      <li><a href="#/add_card" ng-show="Singleton.SessionInfo.userRole !='admin' && Singleton.SessionInfo.userRole !='operator'
+      && Singleton.SessionInfo.test">Add credit card</li>
+      <li><a href="#/register" ng-show="!Singleton.SessionInfo.test">Register</li>
+      <li><a href="#/firm_registration" ng-show="Singleton.SessionInfo.userRole != 'operator' && Singleton.SessionInfo.userRole != 'admin'">Firm registration</li>
+       <li><a href="#/apply_to_firm" ng-show="Singleton.SessionInfo.userRole == 'prodavac' && Singleton.SessionInfo.firmAuthor != 'firmAuthor'
+      && Singleton.SessionInfo.appliedToFirm != 'appliedToFirm' ">Apply to firm</li>
+      <li><a href="#/owned_images" ng-show="Singleton.SessionInfo.userRole == 'kupac' || Singleton.SessionInfo.userRole == 'prodavac'
+      || Singleton.SessionInfo.userRole == 'applied'">Owned images</li>
+      <li><a href="#/upload_image" ng-show="Singleton.SessionInfo.userRole == 'prodavac'">Upload Image</li>
+      <li><a href="#/my_uploads" ng-show="Singleton.SessionInfo.userRole == 'prodavac'"">My uploads</li>
+      <li><a href="#/shopping_cart" ng-show="Singleton.SessionInfo.userRole !='admin' && Singleton.SessionInfo.userRole !='operator'">Shopping cart</li>
+      <li><a href="#/add_categories" ng-show="Singleton.SessionInfo.userRole == 'admin'">Add category</li>
+      <li><a href="#/category_statistics" ng-show="Singleton.SessionInfo.userRole == 'operator' && Singleton.SessionInfo.firmOperator != 'firmOperator'">Category statistics</li>
+      <li><a href="#/manage_users" ng-show="Singleton.SessionInfo.userRole == 'operator' && Singleton.SessionInfo.firmOperator != 'firmOperator'">Manage users</li>
+      <li><a href="#/firm_applications" ng-show="Singleton.SessionInfo.userRole == 'operator' && Singleton.SessionInfo.firmOperator != 'firmOperator'">Firm applications</li>
+      <li><a href="#/author_applications" ng-show="Singleton.SessionInfo.userRole == 'operator' 
+      && Singleton.SessionInfo.firmOperator != 'firmOperator'">Author applications</li>
+      <li><a href="#/firm_author_applications" ng-show="Singleton.SessionInfo.firmOperator == 'firmOperator'">Author applications</li>
+      <li><a href="#/home" ng-show="Singleton.SessionInfo.userRole != 'admin' && Singleton.SessionInfo.userRole != 'operator'">Home</li>
+      <li><a href="#/admin_homepage" ng-show="Singleton.SessionInfo.userRole == 'admin'">Home</li>
+      <li><a href="#/operator_homepage" ng-show="Singleton.SessionInfo.userRole == 'operator' && Singleton.SessionInfo.firmOperator != 'firmOperator'">Home</li>
+      <li><a href="#/firm_operator_homepage" ng-show="Singleton.SessionInfo.firmOperator == 'firmOperator'">Home</li>
+    </ul>
+  </div>
+</div>

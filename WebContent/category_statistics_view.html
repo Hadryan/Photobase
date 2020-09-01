@@ -1,0 +1,17 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">Statistics for: </font><font size="24">{{temp.name}}</font></p><br/>
+		<p><font color="#f39c12">Number of sold images: </font>{{soldImagesCountByCategory}}</p>
+		<p><font color="#f39c12">Average price in category: </font>${{averagePriceInCategory}}</p>
+		
+		<div ng-show="resolutions.length != 0">
+		<p><font color="#f39c12">Most frequently bought resolutions: </font></p>
+		<ul>
+			<li ng-repeat="res in resolutions">
+				<h3>{{res}}</h3>
+			</li>
+		</ul>
+		</div>
+		
+	</form>
+</div>

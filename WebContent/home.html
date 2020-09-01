@@ -1,0 +1,59 @@
+<div id="menu-bar2" class="content">
+  <div>
+    <ul>
+      <li>
+      	<select ng-model="comboBox" ng-change="onSelect()">
+      		<option value="Date/1">Date</option>
+      		<option value="Sales/1">Sales Asc</option>
+      		<option value="Sales/0">Sales Desc</option>
+      		<option value="Price/1">Price Asc</option>
+      		<option value="Price/0">Price Desc</option>
+      		<option value="Name/1">Name Asc</option>
+      		<option value="Name/0">Name Desc</option>
+      		<option value="Rating/1">Rating Asc</option>
+      		<option value="Rating/0">Rating Desc</option>
+      	</select>
+      </li>
+      <li><font color=#f39c12>Sort by: </font></li>
+    </ul>
+  </div>
+</div>
+<div class="content" style="background-color:white">
+	<form name="searchForm" novalidate>
+		<p><font color="#f39c12" size="24">Search:</font></p>
+		<input type="text" name="search" ng-model="searchInput" placeholder="Enter text" ng-required="true">
+		<p><font color="#edb153">Search by:</font></p>
+		<div class="select">
+			<select name="slct" id="slct" ng-model="searchCriteria" placeholder="Select search criteria" align="center" ng-required="true">
+				<option value="" disabled selected>Select search criteria...</option>
+				<option value="Image">image name</option>
+				<option value="Author">author name</option>
+				<option value="Category">category</option>
+				<option value="Keywords">keywords</option>
+			</select>
+		</div>
+		<input type="submit" value="Search" ng-click="search()" ng-disabled="searchForm.$invalid"/>
+	</form>
+</div>
+<div class="content" style="background-color: #dbdbdb">
+	<p ng-show="currentSearchInput!=''"><font color="#74a0e8">Search results for: "{{currentSearchInput}}" - category: {{currentSearchCriteria}}</font></p>
+	<div class="imageLayout">
+	<label ng-repeat="image in imageData">
+		<div class = "imageItem">
+			<p id="paragraph"><font color="#e29212">{{image.info.name}}</font></p>
+			<div class="image-container">
+				<img ng-src="data:image/png;base64, {{image.data}}"/>
+					<div ng-click="previewImage(image.info.id)" class="after"><br/>
+						&nbsp &nbsp Image name: {{image.info.name}}<br/>
+						&nbsp &nbsp Location: {{image.info.location}}<br/>
+						&nbsp &nbsp Rating: {{image.info.rating}}<br/>
+					</div>
+			</div>
+		</div>
+	</label>
+	</div>
+</div>
+<div class="content2" style="background-color: #f39c12">
+	<input type="submit" ng-click="nextPage()" value="next >" ng-disabled="next" style="width: 4%;"/>
+	<input type="submit" ng-click="previousPage()" value="< previous" ng-disabled="previous" style="width: 4%;"/>
+</div>

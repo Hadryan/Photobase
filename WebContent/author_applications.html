@@ -1,0 +1,13 @@
+<div class="content" style="background-color:white">
+	<form name="imagePreviewForm" novalidate>
+		<p><font color="#f39c12" size="24">Author applicants</font></p>
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+		<ul>
+			<li ng-repeat="user in users">
+				<h3 class="heder" ng-click="viewApplication(user)"><font color="#4476ce">id: {{user.id}} - {{user.username}}</font></h3>
+			</li>
+		</ul>
+		
+	</form>
+</div>

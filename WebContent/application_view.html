@@ -1,0 +1,28 @@
+<div class="content" style="background-color:white">
+	<form name="applicantForm" novalidate>
+		<p><font color="#f39c12" size="24">Author application</font></p>
+		
+		<img ng-src="data:image/png;base64, {{images[0]}}"/>
+		<img ng-src="data:image/png;base64, {{images[1]}}"/>
+		<img ng-src="data:image/png;base64, {{images[2]}}"/>
+		<img ng-src="data:image/png;base64, {{images[3]}}"/>
+		<img ng-src="data:image/png;base64, {{images[4]}}"/>
+		<img ng-src="data:image/png;base64, {{images[5]}}"/>
+		<img ng-src="data:image/png;base64, {{images[6]}}"/>
+		<img ng-src="data:image/png;base64, {{images[7]}}"/>
+		<img ng-src="data:image/png;base64, {{images[8]}}"/>
+		<img ng-src="data:image/png;base64, {{images[9]}}"/>
+		
+		<div>
+			<input type="number" ng-show="Singleton.SessionInfo.firmOperator != 'firmOperator'" ng-model="rating" placeholder="Value 1-5" ng-pattern="{{regex}}"
+			 ng-required="true" ng-disabled="Singleton.SessionInfo.userRole != 'operator'" min="1" max="5" style="width: 3%; margins:0px">
+			<input type="submit" ng-show="Singleton.SessionInfo.firmOperator != 'firmOperator'"
+			 ng-click="rateApplicant()" value="Rate applicant" style="width: 120px;" ng-disabled="applicantForm.$invalid"/><br/>
+			 <input type="submit" ng-show="Singleton.SessionInfo.firmOperator == 'firmOperator'"
+			 ng-click="rateFirmApplicant()" value="Approve applicant" style="width: 150px;"/><br/>
+		</div>
+		
+		<p><font color="#4476ce">{{message}}</font></p>
+		
+	</form>
+</div>
