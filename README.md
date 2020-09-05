@@ -46,7 +46,7 @@ Admins can create new categories for images, add new operators, ban users etc.
 #### Operators:
 * Operators need to change their password when logging in for the first time in order to activate their account
 * Approve pending images put up for sale
-* Approve author applications
+* Evaluate author applications
 * Approve firm applications
 * Ban users from the platform
 * Inspect statistics for each image category. (Number of sold images, average price, most frequently bought resolutions etc)
