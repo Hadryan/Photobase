@@ -41,7 +41,7 @@ Admins can create new categories for images, add new operators, ban users etc.
 #### Authors exclusive:
 * Upload photos (select categories, resolutions, add tags, specify prices etc)
 * Apply to firm
-* Recieve notifications for sold imagesvia email
+* Recieve notifications for sold images via email
 
 #### Operators:
 * Operators need to change their password when logging in for the first time in order to activate their account
@@ -55,6 +55,10 @@ Admins can create new categories for images, add new operators, ban users etc.
 * Add new operators
 * Remove operators
 * Add new image categories
+
+#### Firms:
+* Recieve notifications for author applications
+* Reviece notifications for every sale (when an author sells an image on behalf of the firm)
 
 ## Sidenote
 This project was an assignment as part of the course - Web programming in the 6th semester at the Faculty of Computer Science in Belgrade. All platform functionalities were defined in the assignment specifications.
