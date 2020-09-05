@@ -2,7 +2,7 @@
 Web platform for buying/selling photos. (JAX-RS, Angular 1.2, MySQL)
 
 ## Overview
-Photobase is a SPA (single page application) and provides an extensive list of webshop functionalities, with multiple types of users.<br>
+Photobase provides an extensive list of webshop functionalities, with multiple types of users. It is a single page application (SPA).<br>
 Users can browse the gallery and author profiles, and add photos to their shopping cart.
 After registration user account activation is required (with link via email - Gmail API).
 Sold photos are delivered and the authors notified by email.
