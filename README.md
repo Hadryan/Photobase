@@ -62,7 +62,7 @@ Admins can create new categories for photos, add new operators, ban users, look 
 * Receive notifications for every sale (when an author sells an image on behalf of the firm)
 
 ## Sidenote
-This project was an assignment as part of the course - Web programming in the 6th semester at the Faculty of Computer Science in Belgrade. All platform functionalities were defined in the assignment specifications.
+This project was an assignment as part of the course - Web programming during the 6th semester at the Faculty of Computer Science in Belgrade. All platform functionalities were defined in the assignment specifications.
 
 ## Contributors
 - Stefan Ginic - <stefangwars@gmail.com>
