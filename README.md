@@ -23,7 +23,7 @@ Admins can create new categories for photos, add new operators, ban users, look 
 * Search the gallery (by name, author name, category, keywords)
 * Sort the gallery (by number of sales, date, price, name, rating)
 * Add photos in desired resolutions to shopping cart
-* Register (account activation with link sent via Email is required - Gmail API)
+* Register an account (account activation with link sent via Email is required - Gmail API)
 * Login
 
 #### Buyers and authors:
