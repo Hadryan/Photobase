@@ -8,7 +8,7 @@ In order to complete a purchase an account is required. After registration, acco
 Sold photos are delivered to buyers, and the authors are notified, by email.
 Authors can sell each photo in multiple resolutions with different prices. After uploading a photo, it is resized accordingly, and a watermarked version and thumbnail are created for the gallery.
 Users can apply to become authors and sell photos on the platform. They can also register firms. Authors can apply to become a firm partner to sell photos on their behalf.
-Operators approve pending photos for sale, evaluate author applications and approve firms registrations.
+Operators approve pending photos for sale, evaluate author applications and approve firm registrations.
 Admins can create new categories for photos, add new operators, ban users, look up statistics etc.
 
 ## Functionalities
