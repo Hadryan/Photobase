@@ -30,7 +30,7 @@ Admins can create new categories for images, add new operators, ban users etc.
 #### Buyers and authors:
 * Register credit card
 * Buy, rate and comment owned photos (Images are delivered via email)
-* Rate and comment authors (only if the user has bought from that author before)
+* Rate and comment authors (only if the user owns images from him)
 * Apply to become an author by uploading 10 photos for evaluation
 * Register Firm
 * Change password
