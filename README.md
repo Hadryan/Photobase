@@ -2,9 +2,15 @@
 Web platform for buying/selling photos. (JAX-RS, Angular 1.2, MySQL)
 
 ## Overview
-Photobase provides an extensive list of webshop functionalities, with multiple types of users.<br>
-Users can browse the galery and author profiles, and add photos to the shopping cart. After registration user account activation via email is required (Gmail API). Sold photos are delivered and the authors notified by email. Authors can sell each photo in multiple resolutions with different prices. After uploading a photo, it is resized accordingly, and a watermarked version and a thumbnail are created for the galery. Users can apply to become authors, and authors can apply to firms. Users can register firms.
-Operators approve author applications and firms registrations, and look over statistics. Admins can create new categories for images, add new operators, ban users etc.
+Photobase is a SPA (single page application) and provides an extensive list of webshop functionalities, with multiple types of users.<br>
+Users can browse the galery and author profiles, and add photos to their shopping cart.
+After registration user account activation via email is required (Gmail API).
+Sold photos are delivered and the authors notified by email.
+Authors can sell each photo in multiple resolutions with different prices. After uploading a photo, it is resized accordingly, and a watermarked version and thumbnail are created for the galery.
+Users can apply to become authors, and authors can apply to firms. Users can register firms.
+Operators approve author applications and firms registrations, and look over statistics.
+Admins can create new categories for images, add new operators, ban users etc.
+
 ## Functionalities
 #### There are 5 types of users (roles):
 * Unregistered users
