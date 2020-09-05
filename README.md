@@ -20,15 +20,16 @@ Admins can create new categories for photos, add new operators, ban users, look 
 
 #### Functionalities available for all users:
 * View photos and author profiles
-* Search gallery (by name, author name, category, keywords)
-* Sort gallery (by number of sales, date, price, name, rating)
+* Search the gallery (by name, author name, category, keywords)
+* Sort the gallery (by number of sales, date, price, name, rating)
 * Add photos in desired resolutions to shopping cart
 * Register (account activation with link sent via Email is required - Gmail API)
 * Login
 
 #### Buyers and authors:
 * Register credit card
-* Buy, rate and comment owned photos (Images are delivered via email)
+* Buy photos (Images are delivered via email)
+* Rate and comment owned photos
 * Rate and comment authors (only if the user owns images from him)
 * Apply to become an author by uploading 10 photos for evaluation
 * Register Firm
@@ -38,7 +39,7 @@ Admins can create new categories for photos, add new operators, ban users, look 
 * Logout
 
 #### Authors exclusive:
-* Upload photos (select categories, resolutions, add tags, specify prices etc)<br>
+* Upload photos for sale (select categories, resolutions, add tags, specify prices etc)<br>
 (a thumbnail and watermark are generated, and photos in the specified resolutions created)
 * Apply to firm
 * Receive notifications for sold images via email
