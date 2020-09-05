@@ -41,7 +41,7 @@ Admins can create new categories for photos, add new operators, ban users, look 
 #### Authors exclusive:
 * Upload photos for sale (select categories, resolutions, add tags, specify prices etc)<br>
 (a thumbnail and watermark are generated, and photos in the specified resolutions created)
-* Apply to firm
+* Apply to become a firm partner
 * Receive notifications for sold images via email
 
 #### Operators:
