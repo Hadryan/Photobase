@@ -3,10 +3,10 @@ Web platform for buying/selling photos. (JAX-RS, Angular 1.2, MySQL)
 
 ## Overview
 Photobase is a SPA (single page application) and provides an extensive list of webshop functionalities, with multiple types of users.<br>
-Users can browse the galery and author profiles, and add photos to their shopping cart.
+Users can browse the gallery and author profiles, and add photos to their shopping cart.
 After registration user account activation is required (with link via email - Gmail API).
 Sold photos are delivered and the authors notified by email.
-Authors can sell each photo in multiple resolutions with different prices. After uploading a photo, it is resized accordingly, and a watermarked version and thumbnail are created for the galery.
+Authors can sell each photo in multiple resolutions with different prices. After uploading a photo, it is resized accordingly, and a watermarked version and thumbnail are created for the gallery.
 Users can apply to become authors, and authors can apply to firms. Users can register firms.
 Operators approve author applications and firms registrations, and look over statistics.
 Admins can create new categories for images, add new operators, ban users etc.
@@ -21,8 +21,8 @@ Admins can create new categories for images, add new operators, ban users etc.
 
 #### Functionalities available for all users:
 * View photos and author profiles
-* Search galery (by name, author name, category, keywords)
-* Sort galery (by number of sales, date, price, name, rating)
+* Search gallery (by name, author name, category, keywords)
+* Sort gallery (by number of sales, date, price, name, rating)
 * Add photos in desired resolutions to shopping cart
 * Register (account activation with link sent via Email is required - Gmail API)
 * Login
@@ -41,13 +41,13 @@ Admins can create new categories for images, add new operators, ban users etc.
 #### Authors exclusive:
 * Upload photos (select categories, resolutions, add tags, specify prices etc)
 * Apply to firm
-* Recieve notifications for sold images via email
+* Receive notifications for sold images via email
 
 #### Operators:
 * Operators need to change their password when logging in for the first time in order to activate their account
 * Approve pending images put up for sale
 * Approve author applications
-* Appprove firm applications
+* Approve firm applications
 * Ban users from the platform
 * Inspect statistics for each image category. (Number of sold images, average price, most frequently bought resolutions etc)
 
@@ -57,8 +57,8 @@ Admins can create new categories for images, add new operators, ban users etc.
 * Add new image categories
 
 #### Firms:
-* Recieve notifications for author applications
-* Reviece notifications for every sale (when an author sells an image on behalf of the firm)
+* Receive notifications for author applications
+* Receive notifications for every sale (when an author sells an image on behalf of the firm)
 
 ## Sidenote
 This project was an assignment as part of the course - Web programming in the 6th semester at the Faculty of Computer Science in Belgrade. All platform functionalities were defined in the assignment specifications.
