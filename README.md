@@ -62,7 +62,7 @@ Admins can create new categories for photos, add new operators, ban users, look 
 * Receive notifications for author applications
 * Receive notifications for every sale (when an author sells an image on behalf of the firm)
 
-#### Database schema
+## Database schema
 ![Alt text](images/databaseSchema.png?raw=true "")
 
 ## Sidenote
