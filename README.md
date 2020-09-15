@@ -1,5 +1,5 @@
 # Photobase
-Web platform for buying/selling photos. (JAX-RS, Angular 1.2, MySQL)
+Web platform for buying/selling photos. (<b>JAX-RS</b>, <b>Angular 1.2</b>, <b>MySQL</b>)
 
 ## Overview
 Photobase provides an extensive list of <b>webshop</b> functionalities, with <b>multiple types of users</b>.<br>
